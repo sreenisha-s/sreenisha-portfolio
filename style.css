@@ -1,0 +1,207 @@
+:root {
+    --primary: #4361ee;
+    --secondary: #3a0ca3;
+    --accent: #f72585;
+    --light: #f8f9fa;
+    --dark: #212529;
+    --gray: #6c757d;
+    --radius: 8px;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* NAV */
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 20px 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+/* HEADER */
+header {
+    padding: 160px 0 100px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 35px;
+}
+
+.btn {
+    padding: 12px 30px;
+    background: white;
+    color: var(--primary);
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* SECTIONS */
+section {
+    padding: 80px 0;
+}
+
+h2 {
+    margin-bottom: 30px;
+    color: var(--secondary);
+}
+
+/* SKILLS */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.skill-category {
+    background: white;
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    background: #e9ecef;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border-left: 4px solid var(--primary);
+}
+
+/* CERTS */
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.cert-card {
+    background: white;
+    padding: 25px;
+    border-radius: var(--radius);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* ACHIEVEMENTS */
+.achievement-item {
+    background: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: var(--radius);
+    border-left: 5px solid var(--accent);
+}
+
+/* PROFILES */
+.profiles-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.profile-card {
+    background: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: var(--radius);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.profile-card i {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+/* CONTACT */
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.contact-item i {
+    background: var(--primary);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+}
+
+/* FOOTER */
+footer {
+    background: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 25px 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    header h1 { font-size: 2.2rem; }
+    .nav-links { gap: 15px; font-size: 0.9rem; }
+}
